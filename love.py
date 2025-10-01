@@ -189,55 +189,11 @@ photo_files = [
 
 ]
 
-for i, (img_path, caption) in enumerate(photo_files):
+st.subheader("📸 Our Memories")
+
+for img_path, caption in photo_files:
     try:
-        with open(img_path, "rb") as img_file:
-            img_bytes = img_file.read()
-            img_base64 = b64encode(img_bytes).decode("utf-8")
-            img_url = f"data:image/jpeg;base64,{img_base64}"
-
-            # Alternate layout
-            col1, col2 = st.columns([1, 1])
-
-            if i % 2 == 0:  # Even index → image left, caption right
-                with col1:
-                    st.markdown(
-                        f"""
-                        <img src="{img_url}" 
-                             style="max-width:100%; height:220px; border-radius:10px; object-fit:cover; 
-                                    box-shadow:0 4px 10px rgba(0,0,0,0.2);"/>
-                        """,
-                        unsafe_allow_html=True
-                    )
-                with col2:
-                    st.markdown(
-                        f"""
-                        <div style="display:flex; align-items:center; height:220px; text-align:left;">
-                            <p style="font-size:16px; font-weight:bold; color:#333; margin:10px;">{caption}</p>
-                        </div>
-                        """,
-                        unsafe_allow_html=True
-                    )
-            else:  # Odd index → caption left, image right
-                with col1:
-                    st.markdown(
-                        f"""
-                        <div style="display:flex; align-items:center; height:220px; text-align:right;">
-                            <p style="font-size:16px; font-weight:bold; color:#333; margin:10px;">{caption}</p>
-                        </div>
-                        """,
-                        unsafe_allow_html=True
-                    )
-                with col2:
-                    st.markdown(
-                        f"""
-                        <img src="{img_url}" 
-                             style="max-width:100%; height:220px; border-radius:10px; object-fit:cover; 
-                                    box-shadow:0 4px 10px rgba(0,0,0,0.2);"/>
-                        """,
-                        unsafe_allow_html=True
-                    )
-
+        st.image(img_path, caption=caption, use_column_width=True)
     except FileNotFoundError:
         st.error(f"Image not found: {img_path}")
 
@@ -253,14 +209,14 @@ for i, (img_path, caption) in enumerate(photo_files):
 # Map Section
 st.subheader("🗺️ Places We've Been")
 
-st.image("place.jpg", caption="Places we have been together 🏡",width=1000)
+st.image("place.jpg", caption="Places we have been together 🏡",width=300)
 
 # Create and populate the map
 
 st.markdown("---")
 
 st.subheader("📍 Description of the Map")
-st.image("source.jpg", caption="Places we have been together 🏡",width=1000)
+st.image("source.jpg", caption="Places we have been together 🏡",width=300)
 st.write("""
 This map represents a personal educational journey starting from **Home (Sonarpur)** and branching out to key academic milestones:
 
@@ -377,13 +333,13 @@ st.markdown("""
 🍛 My Love All-Time Favorite Food: <span style="color:#FF4B4B;">Biryani</span> 😋
 </h2>
 """, unsafe_allow_html=True)
-st.image("favfood.jpg", caption="Favourite Food",width=1000)
+st.image("favfood.jpg", caption="Favourite Food",width=500)
 st.markdown("""
 <h2 style='text-align: center; color: #FF914D; font-family: "Trebuchet MS", sans-serif;'>
 🍛 My Love  Favorite Flower: <span style="color:#FF4B4B;">Jui</span> 🌺
 </h2>
 """, unsafe_allow_html=True)
-st.image("jui.jpg", caption="Favourite Flower",width=1000)
+st.image("jui.jpg", caption="Favourite Flower",width=500)
 st.markdown("""
 <h2 style='text-align: center; color: #FF914D; font-family: "Trebuchet MS", sans-serif;'>
 🍛 My Love  Favorite Singer: <span style="color:#FF4B4B;">as follows:</span> 🌺
@@ -404,9 +360,7 @@ st.subheader("🎥 A Video Just for You")
 st.markdown("Here's something special I made with all my heart...")
 
 try:
-    video_file = open('specialvideo.mp4', 'rb')
-    video_bytes = video_file.read()
-    st.video(video_bytes)
+    st.video("specialvideo.mp4")
 except FileNotFoundError:
     st.warning("Video file not found. Please place your video in the 'videos' folder.")
 st.markdown("---")
