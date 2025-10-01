@@ -263,7 +263,7 @@ st.image("place.jpg", caption="Places we have been together 🏡",width=100)
 st.markdown("---")
 
 st.subheader("📍 Description of the Map")
-st.image("source.jpg", caption="Places we have been together 🏡",,width=100)
+st.image("source.jpg", caption="Places we have been together 🏡",width=100)
 st.write("""
 This map represents a personal educational journey starting from **Home (Sonarpur)** and branching out to key academic milestones:
 
