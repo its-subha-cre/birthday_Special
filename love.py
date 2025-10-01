@@ -256,14 +256,14 @@ for i, (img_path, caption) in enumerate(photo_files):
 # Map Section
 st.subheader("🗺️ Places We've Been")
 
-st.image("place.jpg",width=100, caption="Places we have been together 🏡")
+st.image("place.jpg", caption="Places we have been together 🏡",width=100)
 
 # Create and populate the map
 
 st.markdown("---")
 
 st.subheader("📍 Description of the Map")
-st.image("source.jpg",width=100, caption="Places we have been together 🏡")
+st.image("source.jpg", caption="Places we have been together 🏡",,width=100)
 st.write("""
 This map represents a personal educational journey starting from **Home (Sonarpur)** and branching out to key academic milestones:
 
