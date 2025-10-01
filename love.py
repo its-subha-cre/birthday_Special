@@ -165,7 +165,7 @@ st.markdown("---")
 st.subheader("📌 Birth Place")
 try:
     with open("birthplace.jpg", "rb") as img_file:
-        st.image(img_file, caption="Dyuti's Birthplace 🏡", use_container_width=True, width=100)
+        st.image(img_file, caption="Dyuti's Birthplace 🏡", width=100)
 except Exception as e:
     st.error(f"⚠️ Failed to load image: {e}")
 
@@ -256,14 +256,14 @@ for i, (img_path, caption) in enumerate(photo_files):
 # Map Section
 st.subheader("🗺️ Places We've Been")
 
-st.image("place.jpg",width=100, caption="Places we have been together 🏡", use_container_width=True)
+st.image("place.jpg",width=100, caption="Places we have been together 🏡")
 
 # Create and populate the map
 
 st.markdown("---")
 
 st.subheader("📍 Description of the Map")
-st.image("source.jpg",width=100, caption="Places we have been together 🏡", use_container_width=True)
+st.image("source.jpg",width=100, caption="Places we have been together 🏡")
 st.write("""
 This map represents a personal educational journey starting from **Home (Sonarpur)** and branching out to key academic milestones:
 
