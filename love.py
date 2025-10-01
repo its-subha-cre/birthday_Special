@@ -163,14 +163,14 @@ With all my heart,<br>
 st.markdown("---")
 
 st.subheader("📌 Birth Place")
-st.image("birthplace.jpg", caption="Dyuti's Birthplace 🏡", width=1000)
+st.image("birthplace.jpg", caption="Dyuti's Birthplace 🏡",width=500)
 
 
 # Auto Image Slideshow
 import streamlit as st
 from base64 import b64encode
 
-st.subheader("📸 Our Memories")
+# st.subheader("📸 Our Memories")
 
 photo_files = [
    
@@ -209,14 +209,14 @@ for img_path, caption in photo_files:
 # Map Section
 st.subheader("🗺️ Places We've Been")
 
-st.image("place.jpg", caption="Places we have been together 🏡",width=300)
+st.image("place.jpg", caption="Places we have been together 🏡",width=500)
 
 # Create and populate the map
 
 st.markdown("---")
 
 st.subheader("📍 Description of the Map")
-st.image("source.jpg", caption="Places we have been together 🏡",width=300)
+st.image("source.jpg", caption="Places we have been together 🏡",width=500)
 st.write("""
 This map represents a personal educational journey starting from **Home (Sonarpur)** and branching out to key academic milestones:
 
