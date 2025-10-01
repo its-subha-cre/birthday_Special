@@ -163,7 +163,7 @@ With all my heart,<br>
 st.markdown("---")
 
 st.subheader("📌 Birth Place")
-st.image("birthplace.jpg", caption="Dyuti's Birthplace 🏡", width=300)
+st.image("birthplace.jpg", caption="Dyuti's Birthplace 🏡", width=1000)
 
 
 # Auto Image Slideshow
@@ -253,14 +253,14 @@ for i, (img_path, caption) in enumerate(photo_files):
 # Map Section
 st.subheader("🗺️ Places We've Been")
 
-st.image("place.jpg", caption="Places we have been together 🏡",width=300)
+st.image("place.jpg", caption="Places we have been together 🏡",width=1000)
 
 # Create and populate the map
 
 st.markdown("---")
 
 st.subheader("📍 Description of the Map")
-st.image("source.jpg", caption="Places we have been together 🏡",width=300)
+st.image("source.jpg", caption="Places we have been together 🏡",width=1000)
 st.write("""
 This map represents a personal educational journey starting from **Home (Sonarpur)** and branching out to key academic milestones:
 
@@ -377,13 +377,13 @@ st.markdown("""
 🍛 My Love All-Time Favorite Food: <span style="color:#FF4B4B;">Biryani</span> 😋
 </h2>
 """, unsafe_allow_html=True)
-st.image("favfood.jpg",width=100, caption="Favourite Food", use_container_width=True)
+st.image("favfood.jpg", caption="Favourite Food",width=1000)
 st.markdown("""
 <h2 style='text-align: center; color: #FF914D; font-family: "Trebuchet MS", sans-serif;'>
 🍛 My Love  Favorite Flower: <span style="color:#FF4B4B;">Jui</span> 🌺
 </h2>
 """, unsafe_allow_html=True)
-st.image("jui.jpg",width=100, caption="Favourite Flower", use_container_width=True)
+st.image("jui.jpg", caption="Favourite Flower",width=1000)
 st.markdown("""
 <h2 style='text-align: center; color: #FF914D; font-family: "Trebuchet MS", sans-serif;'>
 🍛 My Love  Favorite Singer: <span style="color:#FF4B4B;">as follows:</span> 🌺
@@ -393,13 +393,13 @@ col1, col2, col3 = st.columns(3)
 
 # Add images to each column
 with col1:
-    st.image("KK-11.jpg", caption="KK", use_container_width=True)
+    st.image("KK-11.jpg", caption="KK")
 
 with col2:
-    st.image("ar.jpg", caption="Arijit Singh", use_container_width=True)
+    st.image("ar.jpg", caption="Arijit Singh")
 
 with col3:
-    st.image("Amaal_Mallik.jpg", caption="Amaal Mallik", use_container_width=True)
+    st.image("Amaal_Mallik.jpg", caption="Amaal Mallik")
 st.subheader("🎥 A Video Just for You")
 st.markdown("Here's something special I made with all my heart...")
 
