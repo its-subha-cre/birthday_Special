@@ -163,12 +163,7 @@ With all my heart,<br>
 st.markdown("---")
 
 st.subheader("📌 Birth Place")
-import os
-
-if os.path.exists("birthplace.png"):
-    st.image("birthplace.png", width=100, caption="Dyuti's Birthplace 🏡", use_container_width=True)
-else:
-    st.warning("Image 'birthplace.png' not found.")
+st.image("birthplace.jpg",width=100, caption="Dyuti's Birthplace 🏡", use_container_width=True)
 
 # Auto Image Slideshow
 import streamlit as st
@@ -257,22 +252,14 @@ for i, (img_path, caption) in enumerate(photo_files):
 # Map Section
 st.subheader("🗺️ Places We've Been")
 
-import os
-
-if os.path.exists("place.png"):
-    st.image("place.png", width=100, caption="🗺️ Places We've Been", use_container_width=True)
-else:
-    st.warning("Image 'place.png' not found.")
+st.image("place.jpg",width=100, caption="Places we have been together 🏡", use_container_width=True)
 
 # Create and populate the map
 
 st.markdown("---")
 
 st.subheader("📍 Description of the Map")
-if os.path.exists("source.png"):
-    st.image("source.png", width=100, caption="🗺️ Places Where you studied", use_container_width=True)
-else:
-    st.warning("Image 'source.png' not found.")
+st.image("source.jpg",width=100, caption="Places we have been together 🏡", use_container_width=True)
 st.write("""
 This map represents a personal educational journey starting from **Home (Sonarpur)** and branching out to key academic milestones:
 
