@@ -163,7 +163,11 @@ With all my heart,<br>
 st.markdown("---")
 
 st.subheader("📌 Birth Place")
-st.image("birthplace.jpg",width=100, caption="Dyuti's Birthplace 🏡", use_container_width=True)
+try:
+    with open("birthplace.jpg", "rb") as img_file:
+        st.image(img_file, caption="Dyuti's Birthplace 🏡", use_container_width=True, width=100)
+except Exception as e:
+    st.error(f"⚠️ Failed to load image: {e}")
 
 # Auto Image Slideshow
 import streamlit as st
