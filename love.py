@@ -163,11 +163,8 @@ With all my heart,<br>
 st.markdown("---")
 
 st.subheader("📌 Birth Place")
-try:
-    with open("birthplace.jpg", "rb") as img_file:
-        st.image(img_file, caption="Dyuti's Birthplace 🏡", width=100)
-except Exception as e:
-    st.error(f"⚠️ Failed to load image: {e}")
+st.image("birthplace.jpg", caption="Dyuti's Birthplace 🏡", width=300)
+
 
 # Auto Image Slideshow
 import streamlit as st
@@ -256,14 +253,14 @@ for i, (img_path, caption) in enumerate(photo_files):
 # Map Section
 st.subheader("🗺️ Places We've Been")
 
-st.image("place.jpg", caption="Places we have been together 🏡",width=100)
+st.image("place.jpg", caption="Places we have been together 🏡",width=300)
 
 # Create and populate the map
 
 st.markdown("---")
 
 st.subheader("📍 Description of the Map")
-st.image("source.jpg", caption="Places we have been together 🏡",width=100)
+st.image("source.jpg", caption="Places we have been together 🏡",width=300)
 st.write("""
 This map represents a personal educational journey starting from **Home (Sonarpur)** and branching out to key academic milestones:
 
